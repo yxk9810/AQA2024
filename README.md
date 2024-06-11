@@ -70,3 +70,9 @@ bash run.sh
 
 ### 模型结果融合
 参考:process下 merge_result_finetune.py 将上面4个lora 微调模型和2个huggingface 原始模型结果进行合并，生成最终的提交文件
+
+### 方法介绍
+1. 利用tevatron lora finetune 4个mtcb上的检索好的模型
+2. 直接使用mtcb上的检索模型
+
+<img src="IMG/method.png" width = 100% height = 100%/>
