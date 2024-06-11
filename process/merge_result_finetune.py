@@ -4,9 +4,9 @@ import json
 
 # 这里的名字与脚本不太一致，是因为脚本重新把代码优化过了
 
-top_n =50
+top_n =30
 e5_mis = []
-with open('../test_result/e5_7b_instruct_189.txt','r',encoding='utf-8') as lines:
+with open('../preds/e5_7b_top50.txt','r',encoding='utf-8') as lines:
     for line in lines:
         data = line.strip().split(',')[:top_n]
         new_dic = {d.split(' ')[0]:float(d.split(' ')[1]) for d in data}
@@ -14,7 +14,7 @@ with open('../test_result/e5_7b_instruct_189.txt','r',encoding='utf-8') as lines
 
 #
 linq_lora = []
-with open('../test_result/linq_7b_instruct.txt','r',encoding='utf-8') as lines:
+with open('../preds/linq_7b_top50.txt','r',encoding='utf-8') as lines:
     for line in lines:
         data = line.strip().split(',')[:top_n]
         new_dic = {d.split(' ')[0]:float(d.split(' ')[1]) for d in data}
@@ -22,34 +22,34 @@ with open('../test_result/linq_7b_instruct.txt','r',encoding='utf-8') as lines:
 
 
 sfr_lora = []
-with open('../test_result/sfr_7b_instruct.txt','r',encoding='utf-8') as lines:
+with open('../preds/sfr_7b_top50.txt','r',encoding='utf-8') as lines:
     for line in lines:
-        data = line.strip().split(',')[:30]
+        data = line.strip().split(',')[:top_n]
         new_dic = {d.split(' ')[0]:float(d.split(' ')[1]) for d in data}
         sfr_lora.append(new_dic)
 
 
 
 gte_lora = []
-with open('../test_result/gte_7b_instruct.txt','r',encoding='utf-8') as lines:
+with open('../preds/gte_7b_top50.txt','r',encoding='utf-8') as lines:
     for line in lines:
-        data = line.strip().split(',')[:30]
+        data = line.strip().split(',')[:top_n]
         new_dic = {d.split(' ')[0]:float(d.split(' ')[1]) for d in data}
         gte_lora.append(new_dic)
 
 liq_re = []
-with open('../test_result/Linq-Embed-Mistral_182_result.txt','r',encoding='utf-8') as lines:
+with open('../preds/Linq-Embed-Mistral_result.txt','r',encoding='utf-8') as lines:
     for line in lines:
-        data = line.strip().split(',')[:30]
+        data = line.strip().split(',')[:top_n]
         new_dic = {d.split(' ')[0]:float(d.split(' ')[1]) for d in data}
         liq_re.append(new_dic)
 
 
 
 nv_re = []
-with open('../test_result/NV-Embed-v1_180_result.txt','r',encoding='utf-8') as lines:
+with open('../preds/NV-Embed-v1_result.txt','r',encoding='utf-8') as lines:
     for line in lines:
-        data = line.strip().split(',')[:30]
+        data = line.strip().split(',')[:top_n]
         new_dic = {d.split(' ')[0]:float(d.split(' ')[1]) for d in data}
         nv_re.append(new_dic)
 
