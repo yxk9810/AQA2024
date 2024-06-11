@@ -74,5 +74,14 @@ bash run.sh
 ### 方法介绍
 1. 利用tevatron lora finetune 4个mtcb上的检索好的模型
 2. 直接使用mtcb上的检索模型
+### B榜结果
+|模型|B榜结果|
+|:----|:----|
+|NV-Embed-v1|0.182|
+|Linq|0.18|
+|E5-mistral-7b-instruct(lora)|0.167|
+|e5-mistral-7b(lora)+query_body|0.189|
+|4个lora模型top50融合|0.2067|
+|4个lora模型+1、2模型|0.2073|
 
 <img src="IMG/method.png" width = 100% height = 100%/>
