@@ -41,7 +41,8 @@ pip install -e .
   参考data下process_test_data.py 将测试集的论文集合和测试query转化为tevatron需要的数据格式,注意，这里query将原始query和body拼接一起
 
 ### 基于tevatron 双卡lora 微调
-请修改对应的model路径和上面处理得到的corpus和测试集、训练数据
+请修改对应的model路径和上面处理得到的corpus和测试集、训练数据 
+**lora weights下载[路径](https://drive.google.com/file/d/1CzIw4nFzF3ChztGuO_G8bJXEJ3gpLoTO/view?usp=sharing)**
 1. 微调e5-mistral-7b-instruct
 ```buildoutcfg
 bash run_e5_m7b.sh
